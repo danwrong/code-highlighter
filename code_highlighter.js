@@ -75,13 +75,13 @@ CodeHighlighter.addStyle = function(name, rules) {
 	
 	function setEvent() {
 		// set highlighter to run on load (use LowPro if present)
-		if (LowPro && Event.onReady) 
-		  return Event.onReady(CodeHighliter.init);
+		if (Event && Event.onReady) 
+		  return Event.onReady(CodeHighlighter.init.bind(CodeHighlighter));
 		
 		var old = window.onload;
 		
 		if (typeof window.onload != 'function') {
-			window.onload = CodeHighlighter.init;
+			window.onload = function() { CodeHighlighter.init() };
 		} else {
 			window.onload = function() {
 				oldonload();
