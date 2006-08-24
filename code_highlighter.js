@@ -75,7 +75,7 @@ CodeHighlighter.addStyle = function(name, rules) {
 	
 	function setEvent() {
 		// set highlighter to run on load (use LowPro if present)
-		if (Event && Event.onReady) 
+		if (typeof Event != 'undefined' && typeof Event.onReady == 'function') 
 		  return Event.onReady(CodeHighlighter.init.bind(CodeHighlighter));
 		
 		var old = window.onload;
