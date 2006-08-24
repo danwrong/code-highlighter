@@ -84,7 +84,7 @@ CodeHighlighter.addStyle = function(name, rules) {
 			window.onload = function() { CodeHighlighter.init() };
 		} else {
 			window.onload = function() {
-				oldonload();
+				old();
 				CodeHighlighter.init();
 			}
 		}
