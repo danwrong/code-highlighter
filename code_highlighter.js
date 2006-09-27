@@ -182,5 +182,7 @@ CodeHighlighter.init = function() {
 	}
 	
 	// run highlighter on all stylesets
-	for (var i in this.styleSets) highlightCode(this.styleSets[i]);
+	for (var i=0; i < this.styleSets.length; i++) {
+		highlightCode(this.styleSets[i]);
+	}
 }
