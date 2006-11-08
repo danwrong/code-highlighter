@@ -148,11 +148,11 @@ CodeHighlighter.init = function() {
 	
 	function highlightCode(styleSet) {
 		// clear rules array
-		var parsed;
+		var parsed, clsRx = new RegExp("(\\s|^)" + styleSet.name + "(\\s|$)");
 		rules.length = 0;
 		
 		// get stylable elements by filtering out all code elements without the correct className	
-		var stylableEls = codeEls.filter(function(item) {return (item.className.indexOf(styleSet.name)>=0)});
+		var stylableEls = codeEls.filter(function(item) { return clsRx.test(item.className) });
 		
 		// add style rules to parser
 		for (var className in styleSet.rules) addRule(className, styleSet.rules[className]);
