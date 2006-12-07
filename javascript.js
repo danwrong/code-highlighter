@@ -1,6 +1,6 @@
 CodeHighlighter.addStyle("javascript",{
 	comment : {
-		exp  : /(\/\/[^\n]*\n)|(\/\*[^*]*\*+([^\/][^*]*\*+)*\/)/
+		exp  : /(\/\/[^\n]*(\n|$))|(\/\*[^*]*\*+([^\/][^*]*\*+)*\/)/
 	},
 	brackets : {
 		exp  : /\(|\)/
