@@ -6,7 +6,7 @@ CodeHighlighter.addStyle("ruby",{
 		exp  : /\(|\)/
 	},
 	string : {
-		exp  : /'[^']*'|"[^"]*"/
+		exp  : /'[^'\\]*(\\.[^'\\]*)*'|"[^"\\]*(\\.[^"\\]*)*"/
 	},
 	keywords : {
 		exp  : /\b(do|end|self|class|def|if|module|yield|then|else|for|until|unless|while|elsif|case|when|break|retry|redo|rescue|require|raise)\b/

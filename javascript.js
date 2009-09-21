@@ -6,7 +6,7 @@ CodeHighlighter.addStyle("javascript",{
 		exp  : /\(|\)/
 	},
 	string : {
-		exp  : /'[^']*'|"[^"]*"/
+		exp  : /'[^'\\]*(\\.[^'\\]*)*'|"[^"\\]*(\\.[^"\\]*)*"/
 	},
 	keywords : {
 		exp  : /\b(arguments|break|case|continue|default|delete|do|else|false|for|function|if|in|instanceof|new|null|return|switch|this|true|typeof|var|void|while|with)\b/
